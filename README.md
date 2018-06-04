@@ -22,7 +22,7 @@ What is Download-StreetView
 # Run the code
 >* 1.win+R+cmd
 >* 2.cd desktop(switch to the path where you put the file. Here i put the api.txt and zhuaqu.py and csv files on the same path "desktop")
->* 3.change the number of point you want to download in zhuaqu.py(streetscore_boston.csv has 229565 points. Up to 2018.06.04, i have upload pictures from No.16000 to No.16252)
+>* 3.change the number of point you want to download in zhuaqu.py(streetscore_boston.csv has 229565 points. Up to 2018.06.04, i have upload pictures from No.160000 to No.160252)
 >* 4.pyhon zhuaqu.py
 >* Try the steps again using VPN when errors appear<br>
 >* For example:16000.jpg
