@@ -1,4 +1,4 @@
-Join us in Download Google StreetView
+Join us in Downloading Google StreetView
 ===
 What is Download-StreetView
 ---
