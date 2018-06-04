@@ -11,6 +11,7 @@ from urllib.request import urlopen
 import random 
 
 #注意：streetscore_boston.csv文件要放在当前路径下
+#attention:put the api.txt and zhuaqu.py and csv files on the same path
 requestPath = './streetscore_boston.csv'
 APIPath = 'api.txt'
 APIURL1 = 'https://maps.googleapis.com/maps/api/streetview/metadata?'
@@ -20,8 +21,9 @@ apiList = list(pd.read_csv(APIPath,header=None)[0])
 apiIndex = 1
 APIURL2 = "https://maps.googleapis.com/maps/api/streetview?"
 
-#选取你要下载的图片编号，我这里是163000到200000
-for i in range(length)[163000:200000]:
+#选取你要下载的图片编号，我这里是160000到160252
+#Change the number of point you want to download. Here i have upload pictures from No.160000 to No.160252.
+for i in range(length)[160000:160252]:
     thisDF = requestDF.loc[i:i]
     lat = float(thisDF.latitude)
     lng = float(thisDF.longitude)
@@ -34,6 +36,8 @@ for i in range(length)[163000:200000]:
     res=requests.get(url2,verify=True).status_code
     if response['status'] == u'OK':
         if res == 200:
+            #你下载图片的存放路径，可自行设置
+            #The path you put your picture. The path can be changed up to you.
             urllib.request.urlretrieve(url2.strip(),"E:\\photo\%s.jpg"%i)
             print(i)
             print("dowmload success")
